@@ -4,7 +4,7 @@ An internationally wanted league of bitcoin thieves have finally been tracked do
 "Secret Value"   
 ```5b8c0adce49783789b6995ac0ec3ae87d6005897f0f2ddf47e2acd7b1abd```  
 Connect via   
-```nc lair.sdc.tf 1337```
+```nc lair.sdc.tf 1337```   
 Source code   
 ```main.py```   
 ## Solve
