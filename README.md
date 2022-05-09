@@ -6,7 +6,7 @@ An internationally wanted league of bitcoin thieves have finally been tracked do
 Connect via   
 ```nc lair.sdc.tf 1337```
 Source code   
-```main.py```
+```main.py```   
 ## Solve
 Obviosuly we cannot predict the future. The first thing to note is that we can query the oracle an infinite amount of times. 
 The goal here then is probably to leak information about the curve until we get to a point where we can predict the value.
