@@ -19,7 +19,7 @@ randval = mulECPointScalar(NIST_256_CURVE, Q, state)[0] & 0x00ffffffffffffffffff
 So it is using the old state to generate the random value that we need to guess. A crucial thing to notice here is that the state
 is only randomized on the first iteration. So what does the "secret value" do? After some poking around it becomes clear that
 ```secret_value * Q = P```. That's useful to know. Notice further that ```randval = Q * P * old_state```. Notice further that the next new
-state is just ```P * P * old_state```. Then we know that secret_value * backdoor = new_state. Thus we can predict the new state. But there's
+state is just ```P * P * old_state```. Then we know that ```secret_value * backdoor = new_state```. Thus we can predict the new state. But there's
 a problem. remember that long hex value above? Its obfuscating one of the bytes. Thankfully there are only 2^8 values we need to try.
 We create a table with all of the possible ```new_state * Q``` values and then query the oracle again. It will generate one of the values
 in our table and we will know what the correct value for new_state is. Then we can predict the next random value, apply the obfuscation and get the flag.
