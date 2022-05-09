@@ -2,11 +2,11 @@
 ## Description
 An internationally wanted league of bitcoin thieves have finally been tracked down to their internet lair! They are hiding behind a secure portal that requires guessing seemingly random numbers. After apprehending one of the thieves offline, the authorities were able to get a copy of the source code as well as an apparently secret value. Can you help us crack the case? We have no idea how to use this “backdoor number”...   
 "Secret Value"   
-5b8c0adce49783789b6995ac0ec3ae87d6005897f0f2ddf47e2acd7b1abd   
+```5b8c0adce49783789b6995ac0ec3ae87d6005897f0f2ddf47e2acd7b1abd```  
 Connect via   
-nc lair.sdc.tf 1337   
+```nc lair.sdc.tf 1337```
 Source code   
-main.py   
+```main.py```
 ## Solve
 Obviosuly we cannot predict the future. The first thing to note is that we can query the oracle an infinite amount of times. 
 The goal here then is probably to leak information about the curve until we get to a point where we can predict the value.
