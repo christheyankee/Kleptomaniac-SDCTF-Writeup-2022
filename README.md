@@ -23,7 +23,7 @@ a problem. remember that long hex value above? Its obfuscating one of the bytes.
 We create a table with all of the possible ```new_state * Q``` values and then query the oracle again. It will generate one of the values
 in our table and we will know what the correct value for new_state is. Then we can predict the next random value, apply the obfuscation, and get the flag.
 ### One Final Note
-P is divisible by 4 and so (x3+ax+b)^((p+1)>>2)modp gives us the y value for any x value on the curve. This is useful for turning randval into a point we can do scalar multiplication on.
+P is divisible by 4 and so ```(x^3 + a*x + b)^((p + 1) >> 2) mod p``` gives us the ```y``` value for any ```x``` value on the curve. This is useful for turning ```randval``` into a point we can do scalar multiplication on.
 ### The Flag
 ```
 sdctf{W0W_aR3_y0u_Th3_NSA}
