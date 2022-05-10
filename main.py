@@ -45,14 +45,15 @@ def mulECPointScalar(curve, P, d):
     else:
         Q = mulECPointScalar(curve, P, d//2)
         return doubleECPoint(curve, Q)
-if __name__ == "__main__" :
-    # the NIST p-256 curve, (a, b, prime)
-    NIST_256_CURVE = (-3, 0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b, 0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff)
-    # p, chosen securely and arbitrarily...
-    P = (0x1c1259e8bc9ba0823e5ad8480586b26d1f33f52600a3204aeb57c8f4d87434b9, 0xb422ac1753c053f6270bbcab5aa63cfad40534a8d1df8e5425ed597b6c5cf4c2)
-    # q, not any q in particular...
-    Q = (0xc97445f45cdef9f0d3e05e1e585fc297235b82b5be8ff3efca67c59852018192, 0xb28ef557ba31dfcbdd21ac46e2a91e3c304f44cb87058ada2cb815151e610046)
 
+# the NIST p-256 curve, (a, b, prime)
+NIST_256_CURVE = (-3, 0x5ac635d8aa3a93e7b3ebbd55769886bc651d06b0cc53b0f63bce3c3e27d2604b, 0xffffffff00000001000000000000000000000000ffffffffffffffffffffffff)
+# p, chosen securely and arbitrarily...
+P = (0x1c1259e8bc9ba0823e5ad8480586b26d1f33f52600a3204aeb57c8f4d87434b9, 0xb422ac1753c053f6270bbcab5aa63cfad40534a8d1df8e5425ed597b6c5cf4c2)
+# q, not any q in particular...
+Q = (0xc97445f45cdef9f0d3e05e1e585fc297235b82b5be8ff3efca67c59852018192, 0xb28ef557ba31dfcbdd21ac46e2a91e3c304f44cb87058ada2cb815151e610046)
+
+if __name__ == "__main__" :
     # randomly generate initial state
     state = random.randrange(1, NIST_256_CURVE[2])
 
