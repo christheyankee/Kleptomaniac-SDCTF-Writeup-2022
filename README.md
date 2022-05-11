@@ -8,7 +8,7 @@ Connect via
 Source code   
 ```main.py```   
 ## Solve
-Obviosuly we cannot predict the future. The first thing to note is that we can query the oracle an infinite amount of times. 
+Obviously we cannot predict the future. The first thing to note is that we can query the oracle an infinite amount of times. 
 The goal here then is probably to leak information about the curve until we get to a point where we can predict the value.
 So let's actually look at some of what the oracle is doing.
 ### The Nuts and Bolts
